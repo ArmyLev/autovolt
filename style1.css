@@ -1,0 +1,5389 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,9000&display=swap');
+ .picture{
+	 margin-top: 0px;
+ }
+*{
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+}
+
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+	min-height: 100vh;
+	background: black;
+	font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+/* heder style */
+.header{
+	display: flex;
+	width: 100%;
+	height: 100px;
+	background: rgb(0, 0, 0);
+	margin-top: -55px;
+	position: fixed;
+	z-index: 3000;
+}
+
+.siteName{
+	position: absolute;
+	display: flex;
+	margin-left: 10px;
+	margin-top: 7x;
+	box-sizing: border-box;
+	font-family: 'Roboto', sans-serif;
+	text-align: center;
+	filter: url(#fire);
+}
+.siteName img
+{
+	position: relative;
+	width: 290px;
+	height: 99px;	
+}
+.phone{
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	margin-top: 1.5%;
+	margin-left: 78%;
+	padding: 3px;
+}
+
+.mobile {
+	display: none;
+	position: absolute;
+    margin-left: 200px;
+	z-index: 1000;
+}
+.mobile img {
+	width: 50px;
+	height: 50px;
+}
+.phone img {
+	margin: 3px;
+}
+
+.phone a {
+	font-size: 34px;
+	text-decoration: none;
+	color: white;
+}
+
+.phone a:hover {
+	margin-top: -2px;
+	margin-left: -2px;
+	filter: url(#fire);
+}
+
+.phone a:hover {
+	color: rgb(255, 255, 255);
+	font-weight: 600px;
+	-webkit-box: below -120px linear-gradient(transparent, #0008);
+	text-shadow: 0 0 10px #ff0000,
+				0 0 40px #ff0000,
+				0 0 80px #ff0000,
+				0 0 160px #ff0000,
+				0 0 240px #ff0000;
+}
+
+svg {
+	width: 0;
+	height: 0;
+}
+
+.menu{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 29%;
+}
+
+.menu .menuItem{
+	list-style: none;
+}
+.menu .menuItem a{
+	position: relative;
+	background: #fff;
+	font-size: 22px;
+	text-decoration: none;
+	text-align: center;
+	width: 180px;
+	height: 70px;
+	display: inline-block;
+	padding: 20px 20px 0 10px;
+	font-weight: 300px;
+	color: whitesmoke;
+	background: rgba(255,255,255,0.05);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(255,255,255,0.1);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	z-index: 1000;
+	overflow: hidden;
+	backdrop-filter: blur(15px);
+}
+.menu .menuItem a:before{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 50%;
+	background: rgba(255,255,255,0.1);
+}
+.menu .menuItem:first-child a{
+	border-top-left-radius: 30px;
+	border-bottom-left-radius: 30px;
+}
+
+.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 30px;
+	border-bottom-right-radius: 30px;
+}
+#marker{
+	position: absolute;
+	top: 14px;
+	left: 38px;
+	width: 67px;
+	height: 67px;
+	z-index: 1;
+	transition: 0.5s;
+}
+#marker::before{
+    content: '';
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 70px;
+	height: 70px;
+	border-radius: 50%;
+	transition:  0.5s;
+	background: #ff0000;
+	box-shadow: 0 0 15px #ff0000,
+	0 0 30px #ff0000,
+	0 0 45px #ff0000,
+	0 0 60px #ff0000;
+}
+
+.menu .menuItem:nth-child(2):hover ~ #marker::before{
+	background: #ff0;
+	box-shadow: 0 0 15px #ff0,
+	0 0 30px #ff0,
+	0 0 45px #ff0,
+	0 0 60px #ff0;
+}
+.menu .menuItem:nth-child(3):hover ~ #marker::before{
+	background: #0f0;
+	box-shadow: 0 0 15px #0f0,
+	0 0 30px #0f0,
+	0 0 45px #0f0,
+	0 0 60px #0f0;
+}	
+.menu .menuItem:nth-child(4):hover ~ #marker::before{
+	background: #ff308f;
+	box-shadow: 0 0 15px #ff308f,
+	0 0 30px #ff308f,
+	0 0 45px #ff308f,
+	0 0 60px #ff308f;
+}
+
+.menu .menuItem:nth-child(5):hover ~ #marker::before{
+	background: #df2fff;
+	box-shadow: 0 0 15px #df2fff,
+	0 0 30px #df2fff,
+	0 0 45px #df2fff,
+	0 0 60px #df2fff;
+}	
+.menuIcon{
+	display: none;
+}
+.subMenu{
+	position: absolute;
+	-webkit-transform: scaleY(0);
+	-ms-transform: scaleY(0);
+	transform: scaleY(0);
+	-webkit-transform-origin: 0 0;
+	-ms-transform-origin: 0 0;
+	transform-origin: 0 0;
+}
+.menu .subItem:hover .subMenu{
+	-webkit-transform: scaleY(1);
+	-ms-transform: scaleY(1);
+	transform: scaleY(1);
+}
+
+.serviceItem {
+	list-style: none;
+	height: 40px;
+}
+
+.menu .subItem .subMenu .serviceItem a{
+	position: relative;
+	font-size: 14px;
+	text-decoration: none;
+	text-align: center;
+	width: 200px;
+	height: 40px;
+	display: inline-block;
+	margin: 0;
+	padding: 5px 10px 0 5px;
+	color: whitesmoke;
+	background: rgba(0, 0, 0, 0.8);
+	box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+	border-top: 1px solid rgba(255,255,255,0.1);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	overflow: hidden;
+	backdrop-filter: blur(15px);
+}
+
+.menu .subItem .subMenu .serviceItem:hover a {
+	background: rgba(0, 0, 0, 0);
+}
+
+#subMarker{
+	position: absolute;
+	top: 0;
+	left: 48%;
+	width: 40px;
+	height: 40px;
+	z-index: 1;
+}
+#subMarker::before{
+	content: '';
+	position: absolute;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width: 250px;
+	height: 40px;
+	border-radius: 50%;
+	background: #ff0000;
+	box-shadow: 0 0 15px #ff0000,
+	0 0 30px #ff0000,
+	0 0 45px #ff0000,
+	0 0 60px #ff0000;
+}
+
+/* body content style */
+
+.slider{
+	position: relative;
+	background: #000116;
+	width: 100%;
+	min-height: 500px;
+	margin-top: 4%;
+	overflow: hidden;
+	border-radius: 10px;
+}
+.slider .slide{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	clip-path: circle(0% at 0 50%);
+}
+
+.slider .slide img{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.slider .slide.active{
+	clip-path: circle(150% at 0 50%);
+	transition: 2s;
+}
+
+.slider .slide .infoh, .slider .slide .infop{
+	position: absolute;
+	color: #222;
+	background:  rgba(255, 255, 255, 0.3);
+	height: 250px;
+	padding: 20px;
+	border-radius: 5px;
+	box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+}
+.slider .slide .infoh {
+	margin-top: 80px;
+	margin-left: 139px;
+	height: 90px;
+	width: 78%;
+	font-size: 2em;
+	font-weight: 8000;
+	text-align: center;
+	color: white;
+}
+
+.slider .slide .infop {
+	margin-top: 200px;
+	margin-left: 78px;
+	height: 180px;
+	width: 88%;
+	font-size: 1.8em;
+	font-weight: 400;
+	color: white;
+}
+
+
+.sliderNavigation{
+	height: 500px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	opacity: 0;
+	transition: opasity 0.5s ease;
+}
+
+.slider:hover .sliderNavigation{
+	opacity: 1;
+}
+
+.prev-btn, .next-btn{
+	z-index: 999;
+	font-size: 2em;
+	color: #222;
+	background: rgb(255, 0, 0);
+	padding: 10px;
+	cursor: pointer;
+}
+
+.prev-btn{
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+
+}
+.next-btn{
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	
+}
+.sliderNavigationVisibility{
+	z-index: 666;
+	display: flex;
+	justify-content: center;
+}
+.sliderNavigationVisibility .slide-icon{
+	z-index: 666;
+	background: rgb(255, 0, 0);
+	width: 20px;
+	height: 10px;
+	transform: translateY(-50px);
+	margin: 0 6px;
+	border-radius: 2px;
+	box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+}
+
+.sliderNavigationVisibility .slide-icon.active{
+	background: #fff;
+}
+
+.buttonOrder
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.buttonOrder .btn
+{
+	position: relative;
+	width: 160px;
+	height: 60px;
+	display: inline-block;
+	background: #fff;
+	margin: 20px;
+	z-index: 2000;
+}
+.buttonOrder .btn:before,
+.buttonOrder .btn:after
+{
+	content: '';
+	position: absolute;
+	inset: 0;
+	transition: 0.5s;
+	background: rgb(255, 255, 255);
+}
+.buttonOrder .btn:hover:before
+{
+	inset: -3px;
+}
+.buttonOrder .btn:hover:after
+{
+	inset: -3px;
+	filter: blur(10px);
+}
+.buttonOrder .btn .span
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	background: #ff0000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 1.2em;
+	text-transform: uppercase;	
+	letter-spacing: 2px;
+	color: #fff;
+	border: 1px solid #d4040a29;
+	overflow: hidden;
+}
+.buttonOrder .btn .span:focus{
+	color:red;
+}
+.buttonOrder .btn .span::before
+{
+	content: '';
+	position: absolute;
+	height: 100%;
+	background: rgba(228, 5, 5, 0.075);
+	transform: skew(25deg);
+						
+}	
+
+.myBtn1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	margin-top: 15px;
+}
+
+.myBtn1 .btn {
+	width: 400px;
+	height:100px;
+
+}
+
+.myBtn1 .btn .span {
+	width: 400px;
+	height:100px;
+	background: #ff0000;
+}
+
+.myBtn1 .btn:before,
+.myBtn1 .btn:after {
+	background: white;
+}
+
+.myBtn1 .btn:hover:before
+{
+	inset: -5px;
+}
+.myBtn1 .btn:hover:after
+{
+	inset: -5px;
+	filter: blur(20px);
+}
+
+.servicesCard{
+	
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	flex-wrap: wrap;
+}
+
+.servicesCard .cardContainer{
+	position: relative;
+	margin: -1px 10px 100px 10px;
+	height: 300px;
+}
+.servicesCard .cardContainer .face{
+	width: 300px;
+	height: 300px;
+	transition: 0.5s;
+}
+.servicesCard .cardContainer .face.face1{
+	position: relative;
+	background: rgb(255, 255, 255);
+	display: flex;
+	margin-top: -200px;
+	justify-content: center;
+	align-items: center;
+	z-index: 2000;
+	transform: translateY(199px);
+}
+.servicesCard .cardContainer:hover .face.face1{
+	transform: translateY(50px);
+}
+.servicesCard .cardContainer .face.face1 .content{
+	opacity: 0.2;
+	transition: 0.5;
+	width: 100%;
+	height: 300px;
+}
+.servicesCard .cardContainer:hover .face.face1 .content{
+	opacity: 1;
+}
+.servicesCard .cardContainer .face.face1 .content img{
+	max-width: 300px;
+	height: 200px;
+
+}
+.servicesCard .cardContainer .face.face1 .content h3{
+	margin: 10px 0 0;
+	padding: 0;
+	color: red;
+	text-align: center;
+	font-size: 20px;
+	margin-top: 35px;
+}
+.servicesCard .cardContainer .face.face2{
+	position: relative;
+	background: rgb(255, 0, 0);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	box-shadow: 0 20px 50px rgba(255, 255, 255, 0.8);
+
+	transform: translateY(-101px);
+	z-index: 1999;
+}
+
+.servicesCard .cardContainer:hover .face.face2{
+	transform: translateY(0);
+}
+
+.servicesCard .cardContainer .face.face2 .content p{
+	margin: 0;
+	padding: 0;
+	color: white;
+}	
+.servicesCard .cardContainer .face.face2 .content a{
+margin: 15px 0 0;
+display: inline-block;
+text-decoration: none;
+font-weight: 900;
+color:rgb(255, 255, 255);
+padding: 5px;
+border: 1px solid rgb(255, 255, 255);
+}
+.servicesCard .cardContainer .face.face2 .content a:hover{
+	background: rgb(255, 255, 255);
+	color: rgb(255, 0, 0);
+
+}
+
+.reviewsCard{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 40px 0;
+	width: 400px;
+	flex-wrap: wrap;
+}
+.reviewsCard .bodyReviewsCard{
+	position: relative;
+	width: 320px;
+	height: 400px;
+	color: #fff;
+	background: rgb(0, 0, 0);
+	justify-content: center;
+	align-items: center;
+	margin: 20px 30px;
+	transition: 0.5s;
+}
+.reviewsCard .bodyReviewsCard:hover{
+	transform: translateY(-20px);
+}
+.reviewsCard .bodyReviewsCard::before{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+.reviewsCard .bodyReviewsCard::after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(45deg, #ffbc00, #ff0058);
+	filter: blur(38px);
+}
+.swiper-slide:nth-child(2) .reviewsCard .bodyReviewsCard:before,
+.swiper-slide:nth-child(2) .reviewsCard .bodyReviewsCard::after{
+	background: linear-gradient(45deg, #03a9f4, #9d3caa);
+}
+.swiper-slide:nth-child(3) .reviewsCard .bodyReviewsCard:before,
+.swiper-slide:nth-child(3) .reviewsCard .bodyReviewsCard::after{
+	background: linear-gradient(45deg, #4dff03, #11c799);
+}
+
+.swiper-slide:nth-child(5) .reviewsCard .bodyReviewsCard:before,
+.swiper-slide:nth-child(5) .reviewsCard .bodyReviewsCard::after{
+	background: linear-gradient(45deg, #03f44b, #9d3caa);
+}
+
+.swiper-slide:nth-child(6) .reviewsCard .bodyReviewsCard:before,
+.swiper-slide:nth-child(6) .reviewsCard .bodyReviewsCard::after{
+	background: linear-gradient(45deg, #4dff03, #11c799);
+}
+
+.swiper-slide:nth-child(8) .reviewsCard .bodyReviewsCard:before,
+.swiper-slide:nth-child(8) .reviewsCard .bodyReviewsCard::after{
+	background: linear-gradient(45deg, #03f44b, #9d3caa);
+}
+
+.swiper-slide:nth-child(9) .reviewsCard .bodyReviewsCard:before,
+.swiper-slide:nth-child(9) .reviewsCard .bodyReviewsCard::after{
+	background: linear-gradient(45deg, #4dff03, #11c799);
+}
+.reviewsCard .bodyReviewsCard span{
+	position: absolute;
+	top: 6px;
+	left: 6px;
+	right: 6px;
+	bottom: 6px;
+	background: rgba(0, 0, 0, 0.6);
+	z-index: 2;
+}
+.reviewsCard .bodyReviewsCard span::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255, 255, 255, 0.1);
+	pointer-events: none;
+}
+.reviewsCard .bodyReviewsCard .textContent{
+	position: relative;
+	z-index: 10;
+	padding: 20px 40px;
+	overflow-y: auto;
+}
+.reviewsCard .bodyReviewsCard .textContent h2{
+	font-size: 2em;
+	color: #fff;
+	margin-bottom: 10px;
+}
+.reviewsCard .bodyReviewsCard .textContent p{
+	font-size: 1.2em;
+	color: #fff;
+	margin-bottom: 10px;
+	line-height: 1.4em;
+}
+.reviewsCard .bodyReviewsCard .textContent a{
+	display: inline-block;
+	font-size: 1.1em;
+	color: #111;
+	background: #fff;
+	padding: 10px;
+	text-decoration: none;
+	font-weight: 700;
+}
+
+.swiper {
+	width: 100%;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.swiper-slide {
+	background-position: center;
+	background-size: cover;
+	width: 300px;
+	height: 300px;
+}
+
+.footer{
+	display: none;
+	border-top: 3px red solid;
+
+}
+.socialNetworks{
+	margin: 100px;
+	padding: 0;
+	display: flex;
+	
+}
+.socialNetworks .socialNetworksItem{
+position: relative;
+list-style: none;
+width: 50px;
+height: 50px;
+margin: 0 10px;
+border-radius: 50%;
+box-sizing: border-box;
+background: #fff;
+
+}
+.socialNetworks .socialNetworksItem:before,
+.socialNetworks .socialNetworksItem:after{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	border-radius:50%;
+	filter: blur(20px);
+	opacity: 0;
+	transition: 1s;
+	z-index:-1;
+}
+
+.socialNetworks .socialNetworksItem:after{
+	filter: blur(40px);
+}
+
+.socialNetworks .socialNetworksItem:hover::before,
+.socialNetworks .socialNetworksItem:hover::after{
+	opacity: 1;
+}
+
+.socialNetworks .socialNetworksItem a{
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	text-align: center;
+	line-height: 80px;
+	color: #fff;
+	background: #000;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.socialNetworks .socialNetworksItem a .fa {
+	text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: 0.5s;
+	transform: rotateY(0deg) scale(0.8);
+	opacity: 0.2;
+}
+
+.socialNetworks .socialNetworksItem a:hover .fa{
+	opacity: 1;
+	transform: scale(1.2);
+	
+}
+
+.socialNetworks .socialNetworksItem img{
+	width: 50%;
+	height: 50%;
+	
+}
+
+.socialNetworks .socialNetworksItem:nth-child(1) a,
+.socialNetworks .socialNetworksItem:nth-child(1):before,
+.socialNetworks .socialNetworksItem:nth-child(1):after{
+	background: linear-gradient(45deg,#00ff00,#ffffff);
+	
+}
+.socialNetworks .socialNetworksItem:nth-child(2) a,
+.socialNetworks .socialNetworksItem:nth-child(2):before,
+.socialNetworks .socialNetworksItem:nth-child(2):after{
+	background-color: #05e7f7;
+}	
+
+.socialNetworks .socialNetworksItem:nth-child(3) a,
+.socialNetworks .socialNetworksItem:nth-child(3):before,
+.socialNetworks .socialNetworksItem:nth-child(3):after{
+	background:#0051ff;
+}	
+
+.socialNetworks .socialNetworksItem:nth-child(4) a,
+.socialNetworks .socialNetworksItem:nth-child(3):before,
+.socialNetworks .socialNetworksItem:nth-child(4):after{
+	background: linear-gradient(45deg,#b13c63,#ff0000);
+}
+.modal{
+	display: none;
+	position: fixed;
+	z-index: 99999999;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(0,0,0,0.8) ;
+}
+.modalContent{
+	background-color: #000000;
+	margin: 15% auto;
+	padding: 20px;
+	border: 2px solid white;
+	width: 30%;
+}
+
+.modalContent h2 {
+	text-align: center;
+	color: #ff0000;
+}
+
+.modalContent input {
+	width: 100%;
+	height: 40px;
+	margin: 5px;
+	border: 1px solid #ff0000;
+	padding: 0 20px;
+}
+
+.modalContent input::placeholder{
+	color: #ff0000;
+}
+
+
+.close{
+	color: #aaa;
+	float: right;
+	font-size:28px;
+	font-weight: bold;
+	
+}
+
+@media (max-width: 1280px){
+
+	.header{
+		height: 75px;
+		margin-top: -52px;
+	}
+	.siteName img
+	{
+		width: 250px;
+		height: 75px;	
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-left: 450px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+
+
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 37px;
+		font-size: 14px;
+		padding: 0 5px 0 5px;
+	}
+	.serviceItem{
+		height: 38px;
+	}
+
+	#marker{
+		width: 47px;
+		height: 47px;
+	}
+	
+	.phone {
+		margin-left: 990px;
+	}
+
+	.phone a{
+		font-size: 30px;
+	}
+	
+	/* body content style */
+
+	.slider{
+		min-height: 480px;
+		width: 100%;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 290px;
+		font-size: 1.2em;
+		height: 70px;
+		width: 700px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 165px;
+		margin-left: 230px;
+		font-size: 0.68m;
+		height: 180px;
+		width: 820px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-top: 100px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 25px 60px 25px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 270px;
+		height: 210px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(159px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 210px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 270px;
+		height: 160px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 13px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 1024px){
+
+	.header{
+		height: 75px;
+		margin-top: -42px;
+	}
+	.siteName img
+	{
+		width: 250px;
+		height: 75px;	
+	}
+
+
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-left: 360px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+
+
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 37px;
+		font-size: 14px;
+		padding: 0 5px 0 5px;
+	}
+	.serviceItem{
+		height: 38px;
+	}
+
+	#marker{
+		width: 47px;
+		height: 47px;
+	}
+	
+	.phone {
+		margin-left: 760px;
+	}
+
+	.phone a{
+		font-size: 30px;
+	}
+	
+	/* body content style */
+
+	.slider{
+		min-height: 480px;
+		width: 100%;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 162px;
+		font-size: 1.2em;
+		height: 70px;
+		width: 700px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 165px;
+		margin-left: 100px;
+		font-size: 0.68m;
+		height: 180px;
+		width: 824px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-top: 100px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 25px 60px 25px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 270px;
+		height: 210px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(159px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 210px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 270px;
+		height: 160px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 13px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 960px){
+
+	.header{
+		height: 75px;
+		margin-top: -42px;
+	}
+	.siteName img
+	{
+		width: 250px;
+		height: 75px;	
+	}
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-left: 340px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 37px;
+		font-size: 14px;
+		padding: 0 5px 0 5px;
+	}
+	.serviceItem{
+		height: 38px;
+	}
+
+	#marker{
+		width: 47px;
+		height: 47px;
+	}
+	
+	.phone {
+		margin-left: 750px;
+	}
+	.phone a{
+		font-size: 24px;
+	}
+	
+	/* body content style */
+
+	.slider{
+		min-height: 480px;
+		width: 100%;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 132px;
+		font-size: 1.2em;
+		height: 70px;
+		width: 700px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 165px;
+		margin-left: 70px;
+		font-size: 0.68m;
+		height: 170px;
+		width: 824px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-top: 100px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 15px 60px 15px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 270px;
+		height: 210px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(159px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 210px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 270px;
+		height: 160px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 18px;
+		margin-top: 2px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 900px){
+	.menu {
+		display: none;
+	}
+	.menuIcon {
+		background: black;
+		border: 1px white solid;
+	}
+	.menuIcon .menuBars {
+		background: black;
+		color: white;
+	}
+	.menu .menuItem a{
+		background: rgba(0, 0, 0, 0.9);
+	}
+	#marker {
+		display: none;
+	}
+	#subMarker{
+		display: none;
+	}
+}
+@media (max-width: 854px){
+
+	.header{
+		height: 67px;
+		margin-top: -34px;
+	}
+	.siteName img
+	{
+		margin-left: 200px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.mobile img {
+		width: 65px;
+		height: 65px;
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 785px;
+		margin-top: 0px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;	
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 380px;
+		width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+		width: 672px;
+	}
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 120px;
+		font-size: 1.1em;
+		height: 40px;
+		width: 612px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 100px;
+		font-size: 0.68m;
+		height: 220px;
+		width: 652px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-top: 70px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: 0px -30px 60px 20px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 13px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 823px){
+
+	.header{
+		height: 67px;
+		margin-top: -34px;
+	}
+	.siteName img
+	{
+		margin-left: 200px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.mobile img {
+		width: 65px;
+		height: 65px;
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 760px;
+		margin-top: 0px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;	
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 380px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 120px;
+		font-size: 1.1em;
+		height: 40px;
+		width: 612px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 100px;
+		font-size: 0.68m;
+		height: 220px;
+		width: 652px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-top: 70px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: 0px -30px 60px 20px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 13px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 812px){
+
+	.header{
+		height: 67px;
+		margin-top: -32px;
+	}
+	.siteName img
+	{
+		margin-left: 200px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.mobile img {
+		width: 65px;
+		height: 65px;
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 745px;
+		margin-top: 0;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;	
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 380px;
+		width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 100px;
+		font-size: 1.1em;
+		height: 40px;
+		width: 612px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 80px;
+		font-size: 0.68m;
+		height: 230px;
+		width: 652px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-top: 70px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: 0px -40px 60px 10px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 13px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 800px){
+	.mobile{
+		margin-left: 720px;
+	}
+	.slider{
+		min-height: 380px;
+		width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 100px;
+		font-size: 1.1em;
+		height: 40px;
+		width: 612px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 80px;
+		font-size: 0.68m;
+		height: 240px;
+		width: 652px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px -45px 60px 5px;
+		height: 220px;
+		width: 270px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 13px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+}
+@media (max-width: 740px){
+
+	.header{
+		height: 67px;
+		margin-top: -32px;
+	}
+	.siteName img
+	{
+		margin-left: 160px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 670px;
+		margin-top: 3px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;	
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		width: 740px;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+		width: 600px;
+	}
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 90px;
+		font-size: 1.1em;
+		height: 70px;
+		width: 560px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 155px;
+		margin-left: 70px;
+		font-size: 1.4em;
+		height: 170px;
+		width: 600px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 0px 60px 10px;
+		height: 200px;
+		width: 220px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 16px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 732px){ 	
+
+	.header{
+		height: 67px;
+		margin-top: -32px;
+	}
+	.siteName img
+	{
+		margin-left: 160px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 660px;
+		margin-top: 3px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;	
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		width: 740px;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 90px;
+		font-size: 1.1em;
+		height: 70px;
+		width: 560px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 155px;
+		margin-left: 70px;
+		font-size: 1.4em;
+		height: 170px;
+		width: 600px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 160px;
+		height: 60px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.3em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px -5px 60px 20px;
+		height: 200px;
+		width: 220px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 16px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 667px){
+
+	.header{
+		height: 67px;
+		margin-top: -28px;
+	}
+	.siteName img
+	{
+		margin-left: 130px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 595px;
+		margin-top: 0px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;
+		
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		width: 667px;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 83px;
+		font-size: 1em;
+		height: 60px;
+		width: 501px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 155px;
+		margin-left: 60px;
+		font-size: 1.3em;
+		height: 150px;
+		width: 547px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px -2px 60px 2px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 16px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 640px){
+
+	.header{
+		height: 67px;
+		margin-top: -28px;
+	}
+	.siteName img
+	{
+		margin-left: 130px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 570px;
+		margin-top: 0px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;
+		
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+		max-width: 100%;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+		width: 540px;
+	}
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 70px;
+		font-size: 1em;
+		height: 60px;
+		width: 500px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 155px;
+		margin-left: 50px;
+		font-size: 1.4em;
+		height: 160px;
+		width: 540px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 0px 60px 4px;
+		height: 180px;
+		width: 200px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 200px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 200px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 16px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 600px){
+
+	.header{
+		height: 67px;
+		margin-top: -28px;
+	}
+	.siteName img
+	{
+		margin-left: 90px;
+		margin-top: 2px;
+		width: 200px;
+		height: 65px;	
+	}
+	.mobile img {
+		width: 45px;
+		height: 45px;
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 550px;
+		margin-top: 10px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 2px;
+		margin-left: 2px;
+		
+	}
+
+	.menuBars {
+		width: 60px;
+	}
+	.menu{
+		margin-top: 68px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -55px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+		max-width: 100%;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+		width: 540px;
+	}
+	.slider .slide .infoh {
+		margin-top: 70px;
+		margin-left: 83px;
+		font-size: 1em;
+		height: 60px;
+		width: 450px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 155px;
+		margin-left: 65px;
+		font-size: 1.4em;
+		height: 180px;
+		width: 490px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 5px 60px 0px;
+		height: 180px;
+		width: 190px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 190px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 190px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 16px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 568px){
+
+	.header{
+		height: 60px;
+		margin-top: -25px;
+	}
+	.siteName img
+	{
+		margin-left: 110px;
+		margin-top: 5px;
+		width: 150px;
+		height: 50px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 514px;
+		margin-top: 5px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 0px;
+		margin-left: 0px;
+		
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -60px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 568px;
+	}
+	.slider .slide {
+		max-width: 568px;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 54px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 460px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 34px;
+		font-size: 1.1em;
+		height: 130px;
+		width: 500px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.next-btn{
+		margin-right: 0;
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 30px 60px 20px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 540px){
+
+	.header{
+		height: 60px;
+		margin-top: -25px;
+	}
+	.siteName img
+	{
+		margin-left: 90px;
+		margin-top: 5px;
+		width: 150px;
+		height: 50px;	
+	}
+	.phone .full {
+		display: none;
+	}
+
+	.mobile {
+		display: flex;
+		margin-left: 485px;
+		margin-top: 5px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 0px;
+		margin-left: 0px;
+		
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -60px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+	
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+		width: 480px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 50px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 440px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 30px;
+		font-size: 1.1em;
+		height: 130px;
+		width: 480px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.next-btn{
+		margin-right: 0;
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 40px 60px 12px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 17px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 533px){
+
+	.header{
+		height: 60px;
+		margin-top: -25px;
+	}
+	.siteName img
+	{
+		margin-left: 90px;
+		margin-top: 5px;
+		width: 150px;
+		height: 50px;	
+	}
+	.phone .full {
+		display: none;
+	}
+
+	.mobile {
+		display: flex;
+		margin-left: 480px;
+		margin-top: 5px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 0px;
+		margin-left: 0px;
+		
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -60px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+	
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+		width: 480px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 46px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 440px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 26px;
+		font-size: 1.2em;
+		height: 140px;
+		width: 480px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.next-btn{
+		margin-right: 0;
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 35px 60px 20px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 17px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 10px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 270px;
+		height: 340px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 300px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 500px){
+	.slider .slide .info h2{
+		font-size: 1.8em;
+		line-height: 40px;
+	}
+	.slider .slide .info p{
+	   font-size: 0.9em;
+   }
+}
+@media (max-width: 480px){
+
+	.header{
+		height: 60px;
+		margin-top: -20px;
+	}
+	.siteName img
+	{
+		margin-left: 70px;
+		margin-top: 5px;
+		width: 150px;
+		height: 50px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 428px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 0px;
+		margin-left: 0px;
+		
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -60px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 480px;
+	}
+	.slider .slide {
+		max-width: 480px;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 60px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 360px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 125px;
+		margin-left: 40px;
+		font-size: 1.1em;
+		width: 400px;
+		height: 150px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 30px 60px 10px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 210px;
+		height: 180px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(129px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 210px;
+		height: 130px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 12px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 300px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 250px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1.8em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1.2em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 425px){
+
+	.header{
+		height: 50px;
+		margin-top: -20px;
+	}
+	.siteName img
+	{
+		margin-left: 25px;
+		margin-top: 5px;
+		width: 140px;
+		height: 42px;	
+	}
+	.phone .full{
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 375px;
+		margin-top: 2px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 3px;
+		margin-left: 0px;
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -60px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 25px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 374px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 115px;
+		margin-left: 25px;
+		height: 180px;
+		width: 374px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 10px 90px 10px;
+		height: 130px;
+		width: 170px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 170px;
+		height: 170px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(119px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 170px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 170px;
+		height: 100px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 250px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 250px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1.6em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 414px){
+
+	.header{
+		height: 50px;
+		margin-top: -20px;
+	}
+	.siteName img
+	{
+		margin-left: 25px;
+		margin-top: 5px;
+		width: 140px;
+		height: 42px;	
+	}
+	.phone .full{
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 365px;
+		margin-top: 2px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 3px;
+		margin-left: 0px;
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -60px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 120px;
+		padding: 10px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 20px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 374px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 115px;
+		margin-left: 20px;
+		height: 180px;
+		width: 374px;
+	}
+	.sliderNavigation{
+		height: 360px;	
+	}
+	.sliderNavigationVisibility{
+		margin-bottom: -40px;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 10px 90px 10px;
+		height: 130px;
+		width: 170px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 170px;
+		height: 170px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(119px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 170px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 170px;
+		height: 100px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 250px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 250px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1.6em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 1em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 384px){
+
+	.header{
+		height: 50px;
+		margin-top: -20px;
+	}
+	.siteName img
+	{
+		margin-left: 25px;
+		margin-top: 5px;
+		width: 110px;
+		height: 42px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 337px;
+		margin-top: 2px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -50px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 41px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 305px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 115px;
+		margin-left: 24px;
+		height: 170px;
+		width: 335px;
+	}
+	.slider .slide .infop p{
+		font-size: 1.8em;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.sliderNavigation{
+		height: 300px;	
+	}
+	.next-btn {
+		margin-right: 0; 
+	}
+
+	.sliderNavigationVisibility{
+		display: none;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 6px 60px 6px;
+		height: 156px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 170px;
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(109px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 170px;
+		height: 100px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 200px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 200px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 0.8em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 375px){
+
+	.header{
+		height: 50px;
+		margin-top: -20px;
+	}
+	.siteName img
+	{
+		margin-left: 25px;
+		margin-top: 5px;
+		width: 110px;
+		height: 42px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 330px;
+		margin-top: 2px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -50px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 375px;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 150px;
+		padding: 10px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 36px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 305px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 115px;
+		margin-left: 20px;
+		font-size: 9px;
+		height: 180px;
+		width: 335px;
+	}
+
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.sliderNavigation{
+		height: 300px;	
+	}
+	.next-btn {
+		margin-right: 0; 
+	}
+
+	.sliderNavigationVisibility{
+		display: none;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 6px 60px 6px;
+		height: 156px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 170px;
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(109px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 170px;
+		height: 100px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 200px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 200px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 0.8em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 360px){
+
+	.header{
+		height: 50px;
+		margin-top: -20px;
+	}
+	.siteName img
+	{
+		margin-left: 25px;
+		margin-top: 5px;
+		width: 110px;
+		height: 42px;	
+	}
+	.phone .full {
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 310px;
+		margin-top: 2px;
+	}
+	.siteName{
+		margin-left: 100px;
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}
+	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -50px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	
+	
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+	.slider .slide {
+		max-width: 100%;
+	}
+	.slider .slide .infoh, .slider .slide .infop{
+		height: 150px;
+		padding: 10px;
+	}
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 36px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 305px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 115px;
+		margin-left: 20px;
+		font-size: 0.6em;
+		height: 160px;
+		width: 320px;
+	}
+	.slider .slide .info{
+		margin-left: 5px;
+	}
+	.sliderNavigation{
+		height: 300px;	
+	}
+	.next-btn {
+		margin-right: 0; 
+	}
+
+	.sliderNavigationVisibility{
+		display: none;
+	}
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 .btn {
+		width: 250px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 250px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+	}
+	.servicesCard .cardContainer{
+		margin: 0px 3px 60px 3px;
+		height: 156px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 170px;
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(109px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 170px;
+		height: 100px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 7px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 10px 0;
+		width: 200px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		width: 520px;
+		height: 200px;
+		margin: 10px 15px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 5px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 0.8em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 80%;
+		height: 300px;
+	}
+	
+}
+@media (max-width: 320px){
+	.header{
+		height: 50px;
+		margin-top: -15px;
+	}
+	.siteName img
+	{
+		margin-top: 10px;
+		width: 110px;
+		height: 39px;	
+	}
+	.phone .full{
+		display: none;
+	}
+	.mobile {
+		display: flex;
+		margin-left: 270px;
+	}
+	.siteName{
+		margin-left: 80px;
+	}
+	.menu .menuItem a{
+		background: rgba(0, 0, 0, 0.9);
+	}
+	.menuIcon{
+		display: flex;
+		margin-top: 5px;
+		margin-left: 5px;
+	}
+	.menu{
+		margin-top: 50px;
+		margin-left: -60px;
+	}
+	.menu .menuItem a{
+		width: 120px;
+		height: 50px;	
+		font-size: 14px;
+		padding: 15px 20px 0 10px;	
+	}
+	.menu .menuItem:first-child a {
+		border-top-left-radius: 0px;
+		border-bottom-left-radius: 0px;
+	}	
+	.menu .menuItem:nth-last-child(2) a{
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	}
+	.subMenu{
+		margin-left: 125px;
+		margin-top: -50px;
+	}
+	.menu .subItem .subMenu .serviceItem a{
+		width: 150px;
+		height: 33px;
+		font-size: 12px;
+		padding: 2px 5px 2px 5px;
+	}
+	.serviceItem{
+		height: 33px;
+	}
+	/* body content style */
+
+	.slider{
+		min-height: 300px;
+		max-width: 100%;
+	}
+
+	.slider .slide .infoh {
+		margin-top: 50px;
+		margin-left: 36px;
+		font-size: 0.8em;
+		height: 60px;
+		width: 248px;
+	}
+	
+	.slider .slide .infop {
+		margin-top: 115px;
+		margin-left: 20px;
+		height: 200px;
+		width: 280px;
+		font-size: 0.6em;
+		font-weight: 400;
+		color: white;
+	}
+
+	.sliderNavigation{
+		height: 350px;	
+	}
+	.next-btn {
+		margin-right: 0; 
+	}
+
+	.sliderNavigationVisibility{
+		display: flex;
+		margin-bottom: -40px;
+	}
+
+	.buttonOrder{
+		margin-left: 10px;
+	}
+
+	.buttonOrder .btn
+	{
+		width: 140px;
+		height: 40px;
+		margin: 10px;
+	}
+
+	.buttonOrder .btn .span
+	{
+		font-size: 1.1em;
+	}
+	.myBtn1 {
+		margin-left: 0;
+	}
+	.myBtn1 .btn {
+		width: 199px;
+		height:70px;
+		margin-top: 0px;	
+	}
+	
+	.myBtn1 .btn .span {
+		width: 199px;
+		height:70px;
+	}
+	.servicesCard{
+		padding: 0px;
+
+	}
+	.servicesCard .cardContainer{
+		margin: -1px 30px 60px 0;
+		height: 156px;
+	}
+	.servicesCard .cardContainer .face{
+		width: 200px;
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1{
+		margin-top: -100px;
+		transform: translateY(109px);
+	}
+	.servicesCard .cardContainer:hover .face.face1{
+		transform: translateY(15px);
+	}
+	.servicesCard .cardContainer .face.face1 .content{
+		height: 160px;
+	}
+	.servicesCard .cardContainer .face.face1 .content img{
+		width: 200px;
+		height: 100px;
+	
+	}
+	.servicesCard .cardContainer .face.face1 .content h3{
+		font-size: 15px;
+		margin-top: 2px;
+	}
+	.servicesCard .cardContainer .face.face2{
+		padding: 10px;
+		transform: translateY(-51px);
+	}
+	
+	.servicesCard .cardContainer .face.face2 .content p{
+		font-size: 9px;
+	}	
+	.servicesCard .cardContainer .face.face2 .content a{
+	margin: 2px 0 0;
+	font-size: 12px;
+	}
+	
+	.reviewsCard{
+		padding: 5px 0;
+		width: 200px;
+	}
+	.reviewsCard .bodyReviewsCard{
+		height: 200px;
+		margin: 5px 10px;
+	}
+	.reviewsCard .bodyReviewsCard:hover{
+		transform: translateY(-20px);
+	}
+	.reviewsCard .bodyReviewsCard span{
+		top: 2px;
+		left: 2px;
+		right: 2px;
+		bottom: 2px;
+	}
+
+	.reviewsCard .bodyReviewsCard .textContent{
+		padding: 5px 10px;
+	}
+	.reviewsCard .bodyReviewsCard .textContent h2{
+		font-size: 1em;
+	}
+	.reviewsCard .bodyReviewsCard .textContent p{
+		font-size: 0.8 em;
+		line-height: 1em;
+	}
+	
+	.swiper {
+		width: 100%;
+		padding-top: 10px;
+		padding-bottom: 10px;
+	}
+	
+	.swiper-slide {
+		width: 250px;
+    	transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1);
+	}
+	.modalContent{
+		width: 60%;
+		height: 300px;
+	}
+	
+}

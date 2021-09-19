@@ -1,0 +1,515 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+	<link rel="stylesheet" href="htts://cdnjs.cloudflae.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PV1GOfQNHSoD2xbE+QkPxCAF1NEevoEH3S10sibVcOQVnN" crossrigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <title>АвтоVolt</title>
+</head>
+<body>
+    <div class="header">
+	<div class= "siteName">
+		<img src="./img/logo/logo.JPG">
+	</div>
+	<svg>
+		<filter id="fire">
+			<feTurbulence id="turbulence" baseFrequency="0.1 0.1" numOctaves="2" seed="3">
+				<animate attributeName="baseFrequency" dur="10s" values="0.1 0.1;0.12 0.2" repeatCount="indefinite"></animate>
+			</feTurbulence>
+			<feDisplacementMap in="SourceGraphic" scale="3"></feDisplacementMap>
+		</filter>
+	</svg>
+	<div class="menuIcon"><button class="menuBars">Меню</button></div>	
+	<ul class="menu">
+        <li class="menuItem"><a href= "./index.html">Главная</a></li>
+        <li class="menuItem subItem"><a href="#services">Наши услуги</a>
+            <ul class="subMenu">
+                <li class="serviceItem"><a href= "#">Вскрытие авто</a></li>
+                <li class="serviceItem"><a href= "#">Выездной автомеханик</a></li>
+                <li class="serviceItem"><a href= "#">Грузовой автоэлектрик</a></li>
+                <li class="serviceItem"><a href= "#">Диагностика грузовиков</a></li>
+                <li class="serviceItem"><a href= "#">Диагностика легковых авто</a></li>
+                <li class="serviceItem"><a href= "#">Доставка топлива</a></li>
+                <li class="serviceItem"><a href= "#">Замена колеса</a></li>
+                <li class="serviceItem"><a href= "#">Отключение иммобилайзера</a></li>
+                <li class="serviceItem"><a href= "#">Отключение сигнализации</a></li>
+                <li class="serviceItem"><a href= "#">Помощь на дороге</a></li>
+                <li class="serviceItem"><a href= "#">Прикурить авто</a></li>
+                <li class="serviceItem"><a href= "#">Ремонт стартеров и генераторов</a></li>
+                <div id="subMarker"></div>
+            </ul>     
+        </li>  
+        <li class="menuItem"><a href="#reviews">Отзывы</a></li>
+        <div id="marker"></div>
+    </ul>
+
+    <a class="mobile" href="tel:+7-913-466-88-66"><img src="./img/socialIcon/phone.png"></a>
+	<div class= "phone">
+		<a class="full" href="tel:+7-913-466-88-66">+7-913-466-88-66</a>
+	</div>
+</div>
+
+<div class="bodyContent">
+	<div class="slider">
+		<div class="slide active">
+			<img src='./img/slider/slide1.jpg' alt="">
+			<div class="infoh">
+				<h2>ВЫЕЗД АВТОЭЛЕКТРИКА 24 ЧАСА В СУТКИ</h2>
+            </div>
+            <div class="infop">
+				<p>Предлагаем услуги по ремонту автоэлектрики с выездом в любой район Новосибирска и Новосибирской области. Наши мастера имеют огромный опыт и всё необходимое оборудование, чтобы провести качественный ремонт электрики автомобиля на месте поломки транспортного средства.</p>
+			</div>
+		</div>
+		<div class="slide">
+			<img src='./img/slider/slide2.jpg' alt="">
+			<div class="infoh">
+				<h2>РЕМОНТ АВТОЭЛЕКТРИКИ ЛЮБОЙ СЛОЖНОСТИ</h2>
+            </div>
+            <div class="infop">
+				<p>Квалифицированный ремонт электрики автомобилей отечественного и иностранного производства. Решение проблем с запуском авто, установка автомагнитолы, парктроника, камеры заднего вида, AUX и другого дополнительного оборудования на выезде и в нашем сервисе.</p>
+			</div>
+		</div>
+		<div class="slide">
+			<img src='./img/slider/slide3.jpg' alt="">
+			<div class="infoh">
+				<h2>ВЫЕЗД АВТОЭЛЕКТРИКА 24 ЧАСА В СУТКИ</h2>
+            </div>
+            <div class="infop">
+				<p>Предлагаем услуги по ремонту автоэлектрики с выездом в любой район Новосибирска и Новосибирской области. Наши мастера имеют огромный опыт и всё необходимое оборудование, чтобы провести качественный ремонт электрики автомобиля на месте поломки транспортного средства.</p>
+			</div>
+		</div>
+		<div class="slide">
+			<img src='./img/slider/slide4.jpg' alt="">
+			<div class="infoh">
+				<h2>РЕМОНТ АВТОЭЛЕКТРИКИ ЛЮБОЙ СЛОЖНОСТИ</h2>
+            </div>
+            <div class="infop">
+				<p>Квалифицированный ремонт электрики автомобилей отечественного и иностранного производства. Решение проблем с запуском авто, установка автомагнитолы, парктроника, камеры заднего вида, AUX и другого дополнительного оборудования на выезде и в нашем сервисе.</p>
+			</div>
+		</div>
+		<div class="sliderNavigation">
+			<i class="fas fa-chevron-left prev-btn"></i>
+			<i class="fas fa-chevron-right next-btn"></i>
+		</div>
+		<div class="sliderNavigationVisibility">
+			<div class="slide-icon active"></div>
+			<div class="slide-icon"></div>
+			<div class="slide-icon"></div>
+			<div class="slide-icon"></div>
+		</div>	
+	</div>
+    <div class="buttonOrder myBtn1">
+        <a class="btn" href="#"> 
+            <button id="myBtn" class="myBtn span">Вызвать автоэлектрика</button>
+        </a>
+    </div>	
+
+
+
+ <div id="myModal" class="modal">
+        <div class="modalContent">
+            <span class="close">&times;</span>
+            <h2>Вызвать электрика</h2>
+            <form class="formOrder" method="post" action="/send.php">
+			
+                <input class="form__input" type="text" name="name" placeholder="Ваше имя..." required>
+                <input class="form__input" type="text" name="phone" placeholder="Ваш телефон..." required>
+                <input class="form__input" type="text" name="problem" placeholder="Опишите вашу проблему...">
+                
+                <div class="buttonOrder">
+                    <a class="btn" href="#"> 
+                    <button class="span" type="submit"> Отправить </button>
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+	
+	<div id="services" class="servicesCard">
+        <div class="cardContainer">
+            <div class="face face1">
+                <div class="content">
+                    <img src="./img/services/1.1.jpg">
+                    <h3>Вскрытие авто</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>ВСКРЫТИЕ ЗАМКОВ АВТОМОБИЛЯ
+						24 ЧАСА В СУТКИ
+						Предлагаем услуги по вскрытию дверей любого автомобиля без повреждений.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/2.1.jpg">
+                    <h3>Выездной автомеханик</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>ВЫЕЗДНОЙ АВТОМЕХАНИК
+                        24 ЧАСА В СУТКИ
+                        Предлагаем услуги автомеханика по легковым и грузовым автомобилям с выездом. Мастера нашего выездного автосервиса имеют огромный опыт и всё необходимое оборудование, чтобы провести ремонт любого транспортного средства в полевых условиях.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/3.2.jpg">
+                    <h3>Грузовой автоэлектрик</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>Предлагаем услугу "выездной автоэлектрик по грузовым автомобилям и спецтехнике". Наши мастера имеют огромный опыт и всё необходимое оборудование, чтобы провести качественный ремонт электрики любой сложности с выездом на место стоянки.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/4.1.jpg">
+                    <h3>Диагностика грузовиков</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>ОМПЬЮТЕРНАЯ ДИАГНОСТИКА ГРУЗОВЫХ
+                        АВТОМОБИЛЕЙ И АВТОБУСОВ С ВЫЕЗДОМ
+                        Выездная диагностика всех систем грузовиков, автобусов и спецтехники. Наши мастера проверят Ваше авто самым современным диагностическим оборудованием, найдут и устранят практически любую неисправность на месте поломки.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/5.jpg">
+                    <h3>Диагностика легковых авто</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>КОМПЬЮТЕРНАЯ ДИАГНОСТИКА
+                        АВТОМОБИЛЯ С ВЫЕЗДОМ
+                        Выездная диагностика всех систем дизельных и бензиновых автомобилей. Наши мастера проверят Ваше авто самым современным диагностическим оборудованием, найдут и устранят практически любую неисправность на месте поломки.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>
+		</div>
+		<div class="cardContainer">	
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/6.1.jpg">
+                    <h3>Доставка топлива</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>ДОСТАВКА ТОПЛИВА
+                        24 ЧАСА В СУТКИ
+                        Срочный подвоз бензина или дизельного топлива в любой район.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/7.jpg">
+                    <h3>Замена колеса</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>ЗАМЕНА КОЛЕСА НА ДОРОГЕ
+                        24 ЧАСА В СУТКИ
+                        Поможем заменить колесо на запаску или докатку с выездом в любой район.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/8.1.jpg">
+                    <h3>Отключение иммобилайзера</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>
+                        РЕМОНТ И ОТКЛЮЧЕНИЕ
+                        ИММОБИЛАЙЗЕРОВ С ВЫЕЗДОМ
+                        24 ЧАСА В СУТКИ
+                        Предлагаем услуги по ремонту, отключению, перепрошивке штатного и дополнительно установленного иммобилайзера автомобиля с выездом.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>
+		</div>
+		<div class="cardContainer">	
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/9.jpg">
+                    <h3>Отключение сигнализации</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>РЕМОНТ И ОТКЛЮЧЕНИЕ
+                        АВТОСИГНАЛИЗАЦИИ С ВЫЕЗДОМ
+                        24 ЧАСА В СУТКИ
+                        Мы можем отремонтировать, установить или отключить любую автомобильную сигнализацию с выездом в любой район.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>
+		</div>
+		<div class="cardContainer">	
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/10.jpg">
+                    <h3>Помощь на дороге</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>КРУГЛОСУТОЧНАЯ ПОМОЩЬ НА
+                        ДОРОГЕ
+                        Предлагаем полный спектр услуг по оказанию экстренной помощи на дорогах.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>
+		</div>
+		<div class="cardContainer">	
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/11.jpg">
+                    <h3>Прикурить авто</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>СЛУГА ПРИКУРИТЬ АВТОМОБИЛЬ
+                        24 ЧАСА В СУТКИ
+                        Мы работаем круглосуточно. Можем прикурить аккумулятор любого грузового или легкового автомобиля.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>	
+		</div>
+		<div class="cardContainer">
+			<div class="face face1">
+                <div class="content">
+                    <img src="./img/services/12.jpg">
+                    <h3>Ремонт стартеров и генераторов</h3>
+                </div>
+            </div>	
+            <div class="face face2">
+                <div class="content">
+                    <img src="">
+                    <p>РЕМОНТ И ЗАМЕНА СТАРТЕРОВ,
+                        ГЕНЕРАТОРОВ С ВЫЕЗДОМ
+                        24 ЧАСА В СУТКИ
+                        Предлагаем услуги по диагностике, замене, ремонту стартера, генератора любых легковых и грузовых автомобилей с выездом на место поломки транспортного средства или у нас в сервисе.</p>
+                    <a href="#"> Подробнее...</a>
+                </div>
+            </div>
+		</div>
+    </div>
+    <div class="buttonOrder myBtn1">
+        <a class="btn" href="#"> 
+            <button id="myBtn" class="myBtn span">Вызвать автоэлектрика</button>
+        </a>
+    </div>	
+   
+    <div id="reviews" class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Павел</h2>
+                             <p>Были проездом в Новосибирске и вдруг машина задергалась, позвонили в данную организацию, приехал мастер и очень оперативно все починил. Спасибо Вам ребята!!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Мария</h2>
+                             <p>Поехали с подружкой на пляж и как оказалось потом, забыли выключить фары :))) Приехал мастер подключил какуето штучку и машина завелась. Нашей радости не было предела, и цена очень порадовала :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Михаил</h2>
+                             <p>Погасли фары и что самое страшное все это случилось ночью, позвонил ребятам, приехал электрик и за считанные минуты вернул мне свет. Как хорошо что есть такие услуги, еще раз спасибо</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Татьяна</h2>
+                             <p>В один прекрасный день, хотя нельзя его так назвать и снами приключилась беда, вышли из дома и не могли снять с сигнализации машину, звоним нам говорят ожидание около 30 минут, в итоге ждали мастера целый час, приехал очень долго извинялся, сказал пробки и отключил сигнализацию за две минуты. В итоге мы остались довольны :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Сергей</h2>
+                             <p>Заглохла машина по дороге на работу стартер щелкает и не заводится, оттолкал ее в карман, вызвал автоэлектрика по итогу проверили зарядку оказалось нет зарядки, сняли генератор отвезли его на ремонт, привезли обратно поставили прикурили и я поехал дальше. Спасибо вам за оперативность и такой сервис!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Егор</h2>
+                             <p>Жена постирала штаны вместе с брелком от сигнализации, моему возмущению не было предела :) но не об это сейчас. Нашел в интернете данную услугу рассказал все, приехал мастер уже с новым купленным брелком, записал его и все опять работает. Остался доволен и цены хорошие.</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Валерий</h2>
+                             <p>Сел в машину и увидел что не горит ключик, соответсвенно машина не завелась, электрик около часа что то ковырял и в итоге нашел провод который отгнил. Понравилось что цену сразу сказали по телефону за данную работу, так и оказалось ни копейкой больше.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Ольга</h2>
+                             <p>Пробила колесо и не знаю что делать, нашла в интернете данную услугу, хотя раньше и не знала о таком. Приехал дяденька поставил запасное колесо. Спасибо вам, очень оперативно у вас, телефончик записала :)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>   <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Нина</h2>
+                             <p>Захлопнули ключи в машине, что делать не знаем. Позвонили сюда, приехал парень и открыл машину так быстро, что мы не успели глазом моргнуть, сказал куда приехать чтоб сделать запасной ключ. Очень вам благодарны.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>      
+            <div class="swiper-slide">
+                <div class="reviewsCard"> 
+                    <div class="bodyReviewsCard">
+                        <span></span>
+                        <div class="textContent">
+                            <h2>Людмила</h2>
+                             <p>Поехали за грибами и в лесу потеряли метку от сигнализации, машина заводится и глохнет. Мастер ехал долго, но и мы были не близко :)) Спустя сорок минут мы уже ехали домой. Будем рекомендовать вас всем, спасибо большое!!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+<div id="footer" class="footer">
+	<ul class="socialNetworks"> 
+		<li class="socialNetworksItem"><a href="#"><img class="fa" src="./img/socialIcon/31.svg"></a></li>
+		<li class="socialNetworksItem"><a href="#"><img class="fa" src="./img/socialIcon/32.png"></a></li>
+		<li class="socialNetworksItem"><a href="#"><img class="fa" src="./img/socialIcon/33.svg"></a></li>
+		<li class="socialNetworksItem"><a href="#"><img class="fa" src="./img/socialIcon/34.svg"></a></li>
+	</ul>
+</div>
+
+
+
+
+    <script src= "./script1.js"></script>
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script >
+		$( function() {
+		$( ".orderButton" ).draggable({
+        });
+	 	 } );
+	</script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          //Курсор ручкой
+          grabCursor: true,
+          //Прокручивание при клике
+          slideToClickedSlide: true,
+          // свободная прокрутка
+          freeMode: true,
+          //autoplay: {
+            //delay: 5000,
+            //disableOnInteraction: false,
+           // },
+            slidesPerView: 4,
+            //центрирование начального слайда
+            centeredSlides: true,
+            effect: 'coverflow',
+            coverflowEffect: {
+                //угол
+            rotate: 20,
+            //тень
+            slideShadows: false,
+            //наложение
+            stretch: 2,
+            modifier: 1,
+            //удаление
+            depth: 500,
+          },
+          pagination: {
+            el: ".swiper-pagination",
+          },
+        });
+    </script>
+</body>
+</html>
